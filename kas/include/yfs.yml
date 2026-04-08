@@ -1,0 +1,25 @@
+header:
+  version: 14
+  includes:
+    - kas/include/configs/common.yml
+    - kas/include/configs/rm_work.yml
+
+repos:
+  meta-yfs:
+    path: meta-yfs
+
+  meta-yfs-distro:
+    path: meta-yfs-distro
+
+local_conf_header:
+
+  meta-yfs: |
+    EXTRA_IMAGE_FEATURES += "allow-root-login"
+
+  ditro-options: |
+    NO_RECOMMENDATION = "1"
+
+  build_performance: |
+    INHERIT += "buildstats"
+    
+distro: yfs
