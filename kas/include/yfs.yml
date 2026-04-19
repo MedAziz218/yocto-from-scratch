@@ -3,6 +3,7 @@ header:
   includes:
     - kas/include/configs/common.yml
     - kas/include/configs/rm_work.yml
+    - kas/include/layers/meta-virtualization.yml
 
 repos:
   meta-yfs:
@@ -12,9 +13,6 @@ repos:
     path: meta-yfs-distro
 
 local_conf_header:
-
-  meta-yfs: |
-    EXTRA_IMAGE_FEATURES += "allow-root-login"
 
   ditro-options: |
     NO_RECOMMENDATION = "1"

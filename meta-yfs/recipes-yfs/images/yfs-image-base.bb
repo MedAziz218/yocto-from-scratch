@@ -1,13 +1,22 @@
-SUMMARY = "bitbake-layers recipe"
-DESCRIPTION = "Recipe created by bitbake-layers"
+SUMMARY = "basic image"
+
 LICENSE = "MIT"
 
-python do_display_banner() {
-    bb.plain("***********************************************");
-    bb.plain("*                                             *");
-    bb.plain("*  Example recipe created by bitbake-layers   *");
-    bb.plain("*                                             *");
-    bb.plain("***********************************************");
-}
+inherit core-image
 
-addtask display_banner before do_build
+IMAGE_FEATURES += "\
+    ssh-server-openssh \
+    package-management \
+    bash-completion-pkgs \
+    allow-root-login \
+    empty-root-password \
+    serial-autologin-root \
+"
+
+IMAGE_INSTALL:append:tegra = " l4t-usb-device-mode"
+
+IMAGE_INSTALL:append:tegra = " nvidia-docker"
+IMAGE_INSTALL += "\
+    docker \
+    docker-compose \
+"

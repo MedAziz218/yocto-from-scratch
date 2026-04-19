@@ -30,3 +30,4 @@ repos:
       meta-perl:
       meta-python:
       meta-webserver:
+      meta-filesystems:
