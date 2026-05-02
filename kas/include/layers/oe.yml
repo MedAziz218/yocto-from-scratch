@@ -17,6 +17,8 @@ repos:
     commit: a19afb7db1b9995ce433f8bfeb5406c9fd1fdc19
     layers:
       meta:
+      meta-selftest:
+
 
   meta-openembedded:
     url: https://git.openembedded.org/meta-openembedded

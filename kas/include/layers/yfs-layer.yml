@@ -17,7 +17,5 @@ local_conf_header:
   ditro-options: |
     NO_RECOMMENDATION = "1"
 
-  build_performance: |
-    INHERIT += "buildstats"
     
-distro: yfs
+
